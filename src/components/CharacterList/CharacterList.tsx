@@ -13,7 +13,7 @@ const CharacterList = (): React.ReactElement => {
     };
     getCharacters();
   }, []);
-  return <div>{}</div>;
+  return <div>{list[0].created}</div>;
 };
 
 export default CharacterList;
