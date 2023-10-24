@@ -16,11 +16,13 @@ const CharacterCard = ({
   return (
     <article className="character-card">
       <img className="character-card__image" src={image} alt={name} />
-      <div className="card-text">
-        <h2 className="card-text__title">{name}</h2>
-        <span className="card-text__name">{height}</span>
-        <span className="card-text__height">{mass}</span>
-        <span className="card-text__mass">{created}</span>
+      <div className="character-card-text">
+        <h2 className="character-card-text__title">{name}</h2>
+        <div className="card-text-block">
+          <span className="card-text-block__name">{`Height: ${height}`}</span>
+          <span className="card-text-block__height">{`Mass: ${mass}`}</span>
+          <span className="card-text-block__mass">{`Date of Creation: ${created}`}</span>
+        </div>
       </div>
     </article>
   );
