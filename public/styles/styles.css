@@ -6,6 +6,7 @@
 
 html {
   font-family: "Kanit", sans-serif;
+  background-color: black;
 }
 
 body {
@@ -23,4 +24,8 @@ li {
 
 img {
   max-width: 100%;
+}
+
+.container {
+  padding: 10px;
 }

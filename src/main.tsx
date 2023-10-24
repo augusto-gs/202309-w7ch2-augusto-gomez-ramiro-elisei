@@ -4,6 +4,7 @@ import App from "./components/App/App";
 import "../public/styles/styles.css";
 import "./components/App/App.css";
 import "./components/CharacterCard/CharacterCard.css";
+import "./components/CharacterList/CharacterList.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: center;
   background-color: #b20a0b;
-  width: 30%;
   border-radius: 33px;
+  overflow: hidden;
 }
 
 .character-card-text {
