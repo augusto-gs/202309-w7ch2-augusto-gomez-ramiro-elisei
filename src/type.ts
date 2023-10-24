@@ -3,4 +3,5 @@ export interface Character {
   height: string;
   mass: string;
   created: string;
+  image: string;
 }

@@ -12,7 +12,7 @@ describe("Given a CharacterCard component", () => {
         image: "",
       };
 
-      render(<CharacterCard character={characterData} />);
+      render(<CharacterCard character={characterData} image={9} />);
 
       const title = screen.getByRole("heading", { name: characterData.name });
 
