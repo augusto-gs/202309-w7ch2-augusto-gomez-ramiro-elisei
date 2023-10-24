@@ -1,0 +1,15 @@
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.main-header__title {
+  font-size: 103px;
+  color: #000;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 3px 3px 0 #ffe81f, -1px -1px 0 #ffe81f, 1px -1px 0 #ffe81f,
+    -1px 1px 0 #ffe81f, 1px 1px 0 #ffe81f;
+  letter-spacing: 0.35rem;
+}
