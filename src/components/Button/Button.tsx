@@ -1,5 +1,5 @@
 interface ButtonProps {
-  buttonText: "+" | "-" | "reset";
+  buttonText: "+" | "-" | "reset mass";
   actionOnClick: () => void;
 }
 
