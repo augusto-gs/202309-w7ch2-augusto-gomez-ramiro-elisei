@@ -1,4 +1,5 @@
 import Button from "../Button/Button";
+
 interface Character {
   name: string;
   height: string;
@@ -31,20 +32,20 @@ const CharacterCard = ({
         <div className="card-text-block">
           <span className="card-text-block__name">{`Height: ${height}`}</span>
           <span className="card-text-block__height">{`Mass: ${mass}`}</span>
+          <Button
+            buttonText="+"
+            actionOnClick={() => {
+              increaseMassFunction();
+            }}
+          />
+          <Button
+            buttonText="-"
+            actionOnClick={() => {
+              decreaseMassFunction();
+            }}
+          />
           <span className="card-text-block__mass">{`Date of Creation: ${created}`}</span>
         </div>
-        <Button
-          buttonText="-"
-          actionOnClick={() => {
-            decreaseMassFunction();
-          }}
-        />
-        <Button
-          buttonText="+"
-          actionOnClick={() => {
-            increaseMassFunction();
-          }}
-        />
       </div>
     </article>
   );
