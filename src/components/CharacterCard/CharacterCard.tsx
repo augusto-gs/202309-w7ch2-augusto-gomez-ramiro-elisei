@@ -10,11 +10,15 @@ interface Character {
 interface CharacterCardProps {
   character: Character;
   image: number;
+  increaseMassFunction: () => void;
+  decreaseMassFunction: () => void;
 }
 
 const CharacterCard = ({
   character: { name, height, mass, created },
   image,
+  increaseMassFunction,
+  decreaseMassFunction,
 }: CharacterCardProps): React.ReactElement => {
   return (
     <article className="character-card">
@@ -28,8 +32,18 @@ const CharacterCard = ({
         <div className="card-text-block">
           <span className="card-text-block__name">{`Height: ${height}`}</span>
           <span className="card-text-block__height">{`Mass: ${mass}`}</span>
-          <Button buttonText="+" actionOnClick={() => {}} />
-          <Button buttonText="-" actionOnClick={() => {}} />
+          <Button
+            buttonText="+"
+            actionOnClick={() => {
+              increaseMassFunction();
+            }}
+          />
+          <Button
+            buttonText="-"
+            actionOnClick={() => {
+              decreaseMassFunction();
+            }}
+          />
           <span className="card-text-block__mass">{`Date of Creation: ${created}`}</span>
         </div>
       </div>
