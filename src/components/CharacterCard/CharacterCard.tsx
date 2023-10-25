@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 interface Character {
   name: string;
   height: string;
@@ -8,11 +9,15 @@ interface Character {
 interface CharacterCardProps {
   character: Character;
   image: number;
+  increaseMassFunction: () => void;
+  decreaseMassFunction: () => void;
 }
 
 const CharacterCard = ({
   character: { name, height, mass, created },
   image,
+  increaseMassFunction,
+  decreaseMassFunction,
 }: CharacterCardProps): React.ReactElement => {
   return (
     <article className="character-card">
@@ -28,6 +33,18 @@ const CharacterCard = ({
           <span className="card-text-block__height">{`Mass: ${mass}`}</span>
           <span className="card-text-block__mass">{`Date of Creation: ${created}`}</span>
         </div>
+        <Button
+          buttonText="-"
+          actionOnClick={() => {
+            decreaseMassFunction();
+          }}
+        />
+        <Button
+          buttonText="+"
+          actionOnClick={() => {
+            increaseMassFunction();
+          }}
+        />
       </div>
     </article>
   );
