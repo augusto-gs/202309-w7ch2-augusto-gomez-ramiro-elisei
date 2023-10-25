@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 
 describe("Given a CharacterCard component", () => {
   describe("When it receives a Luke's information", () => {
-    test("Then it shows its name on a heading", () => {
+    test("Then it shows its name on a2q heading", () => {
       const characterData = {
         name: "Luke",
         height: "",
