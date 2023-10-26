@@ -23,6 +23,8 @@ const CharacterCard = ({
   return (
     <article className="character-card">
       <img
+        width={400}
+        height={500}
         className="character-card__image"
         src={`https://starwars-visualguide.com/assets/img/characters/${image}.jpg`}
         alt={name}
