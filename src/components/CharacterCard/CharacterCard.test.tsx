@@ -12,7 +12,14 @@ describe("Given a CharacterCard component", () => {
         image: "",
       };
 
-      render(<CharacterCard character={characterData} image={9} />);
+      render(
+        <CharacterCard
+          decreaseMassFunction={() => {}}
+          increaseMassFunction={() => {}}
+          character={characterData}
+          image={9}
+        />,
+      );
 
       const title = screen.getByRole("heading", { name: characterData.name });
 
@@ -32,7 +39,14 @@ describe("Given a CharacterCard component", () => {
 
       const imgUrl = `https://starwars-visualguide.com/assets/img/characters/${imageId}.jpg`;
 
-      render(<CharacterCard image={imageId} character={characterAlt} />);
+      render(
+        <CharacterCard
+          increaseMassFunction={() => {}}
+          decreaseMassFunction={() => {}}
+          image={imageId}
+          character={characterAlt}
+        />,
+      );
 
       const image = screen.getByRole("img");
       expect(image).toHaveAttribute("src", imgUrl);
